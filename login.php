@@ -53,15 +53,16 @@ if(isset($_POST["submit"])){
 
 	if(isset($email) && isset($pass)){
 		$result = mysqli_query($con, $sql);
-       // echo "<script>console.log('query ran successfully')</script>";
 		$num_rows = mysqli_num_rows($result);
-       // echo "<script>console.log('$num_rows')</script>";
 		if($num_rows > 0){
 			$_SESSION["email"] = $_POST["email"];
 			$_SESSION["password"] = $_POST["pass"];
 		}
-		else
+		else{
 			echo "<script>console.log('cannot login')</script>";
+			header("Location: register.php");
+			exit();
+		}
     }//isset email and password
   }//isset submit
   checklogin();
