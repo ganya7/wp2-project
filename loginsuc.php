@@ -9,20 +9,13 @@ session_start();
 </head>
 <body>
 	<p>Succesfully login</p>
-	<button type="button" onclick="load()">Logout</button>
+	<button type="button"><a href="logout.php">Logout</a> </button>
 	<?php
-	//echo "<p>$_SESSION['email']</p>";
 	print_r($_SESSION);
-	//echo "<script>console.log('$_SESSION["email"]')</script>";
-	//echo "<script>console.log('$_SESSION["password"]')</script>";
+	$email = $_SESSION["email"];
+	$pass = $_SESSION["password"];
+	echo "<script>console.log('$email')</script>";
+	echo "<script>console.log('$pass')</script>";
 	?>
-	<script type="text/javascript">
-		function load(){
-			<?php
-			session_unset();
-			session_destroy();
-			?>
-		}
-	</script>
 </body>
 </html>
