@@ -80,44 +80,22 @@ session_start();
 						{
 							$con=mysqli_connect("localhost","root","","login");
 							if($con)
-							{
 								echo "Database connected";
-							}
 							else
-							{
 								echo "Connection unsuccessfully";
-							}
 							$sql = "insert into login(fname,lname,phone,email,password) values ('$fname','$lname','$contact','$email','$pass');";
-
 							$result= mysqli_query($con,$sql);
-
 							if($result)
 							{
-
-								
 								echo "<script>console.log('Data added successfully')</script>";
-								//header("Location: http://localhost/1514119/login.php"); /* Redirect browser */
 								header("Location: login.php");
+								session_unset();
+								session_destroy();
 								exit();
-
-
 							}
-
 							else
-
-						/*	{
-								?>
-								<br>
-								<h2><u>INVALID REGISTRATION </u></h2><br>
-								REGISTER AGAIN
-								<?php 
-							}*/
-							{
 								echo "<br><h2>Invalid registration. Please try again</h2>";
-							}
-
 						} 
-
 					}
 					?>
 
@@ -135,7 +113,6 @@ session_start();
 
 					span{
 						color: red;
-
 					}
 
 				</style>
@@ -146,8 +123,6 @@ session_start();
 
 					<h2><center>Register Form</center></h2>
 					<form class="col s12" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"> 
-
-
 
 						<div class="row">
 							<div class="input-field col s6">
@@ -192,12 +167,9 @@ session_start();
 							</div>
 						</div>  
 
-
 						<center><div class="form-group input-field">
 							<input class="btn btn-default btn-success"  type="submit" name="submit" value="submit">
 						</div></center>
-
-
 
 					</form>
 				</div>

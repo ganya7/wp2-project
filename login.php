@@ -66,7 +66,7 @@ if(isset($_POST["submit"])){
     }//isset email and password
   }//isset submit
   checklogin();
-?>
+  ?>
 
 </head>
 
@@ -102,10 +102,7 @@ if(isset($_POST["submit"])){
 
 			<center><b><u><a href="register.php">Click Here to Register</a></u></b> </center>
 
-
-
 		</form>
 	</div>
-
 </body>
 </html>
