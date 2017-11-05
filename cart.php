@@ -2,76 +2,138 @@
 session_start();
 ?>
 <!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+<script type="text/javascript">
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+            
+
+</script>
+
+<!-- !DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Buy mobile</title>
 	<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-</head>
-<body>
-	<form method="post" action="#">
-		Brand:
-		<select name="brand" id="brand">
-			<option >Select brand</option>
-			<option value="samsung">Samsung</option>
-			<option value="apple">Apple</option>
-			<option value="oneplus">Oneplus</option>
-			<option value="htc">Htc</option>
-		</select>
-		<br>
-		Model:
-		<select name="model" id="model">
-			<option>Select a model</option>
-		</select>
-		<br>
-		Color:
-		<select name="color" id="color">
-			<option>Select color</option>
-			<option value="ash">Ash</option>
-			<option value="whitesmoke">White Smoke</option>
-		</select><br>
-		Storage:
-		<select name="storage" id="storage">
-			<option>Select storage</option>
-			<option value="64gb">64 GB</option>
-			<option value="128gb">128 GB</option>
-		</select><br>
-		Price: 
-		<span id="price" name="price"></span><br>
-		<input type="submit" id="submit" name="buy"><br>
+</head> -->
+<body style="background-color: #2E6280">
+	<?php
+if(empty($_SESSION)){
+	header("Location: login.php");
+	exit();
+}
+$email = $_SESSION["email"];
+$pass = $_SESSION["password"];
+$con = mysqli_connect("localhost","root","","mobile");
+if($con)
+	echo "<script>console.log('Database connected')</script>";
+else
+	echo "<script>console.log('Unable to connect to database')</script>";
+
+if(isset($_POST["buy"])){
+	echo $_POST["model"];
+	$sql = "select available from stock where model='".$_POST["model"]."'";
+	$result = mysqli_query($con,$sql);
+	$row = mysqli_fetch_assoc($result);
+	echo "no of rows: ".$row["available"];
+	if($row["available"] > 0){
+		$_SESSION["brand"] = $_POST["brand"];
+		$_SESSION["model"] = $_POST["model"];
+		$_SESSION["color"] = $_POST["color"];
+		$_SESSION["storage"] = $_POST["storage"];
+		//$_SESSION["price"] = $_POST["price"];
+		header("Location: price.php");
+		exit();
+	}
+	else{
+		echo "Stock not available. Please try again";
+	}
+
+}
+?>
+
+
+	<div class="container" style="left:40%;margin-top:60px; border: 3px solid black;background-color:white;  width: 30%;">
+
+	<h2><center>Purchase</center></h2>
+	<form class="col s12"  method="post" action="price.php"> 
+
+
+
+	<!-- <div class="input-field col s12">
+	    <select name="brand" id="brand">
+	      <option>Choose your option</option>
+	      <option value="Samsung">Samsung</option>
+	      <option value="Apple">Apple</option>
+	      <option value="OnePlus">OnePlus</option>
+	      <option value="HTC">HTC</option>
+	    </select>
+	    <label>Brand</label>
+	  </div><br>
+	
+	 -->
+    <div class="input-field col s12">
+    <select name="model" id="model">
+    <option value="" disabled selected>Choose your option</option>
+      <optgroup label="Samsung">
+        <option value="S8">Samsung Galaxy S8</option>
+        <option value="S8+">Samsung Galaxy S8+</option>
+      </optgroup>
+      <optgroup label="Apple">
+        <option value="7">Iphone 7</option>
+        <option value="X">Iphone X</option>
+      </optgroup>
+       <optgroup label="OnePlus">
+        <option value="5">OnePlus 5</option>
+        <option value="5T">OnePlus 5T</option>
+      </optgroup>
+       <optgroup label="HTC">
+        <option value="11">HTC U11+</option>
+        <option value="Life">HTC U11 Life</option>
+      </optgroup>
+    </select>
+    <label>Model</label>
+  </div><br>
+
+   <div class="input-field col s6">
+    <select name="color" id="color">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="Ash">Ash</option>
+      <option value="White Smoke">White Smoke</option>
+      <option value="Gold">Gold</option>
+    </select>
+    <label>Color</label>
+  </div> <br>
+
+  <div class="input-field col s6">
+    <select name="storage" id="storage">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="64GB">64 GB</option>
+      <option value="128GB">128 GB</option>
+    </select>
+    <label>Storage</label>
+  </div>
+	
+	
+
+			<center><div class="form-group input-field">
+			<input class="btn btn-default btn-success" id="submit" type="submit" name="buy">
+			</div></center>
 
 	</form>
-	<?php
 
-	$mobileJSON = '[
-		{"brand": "samsung",
-	"model": ["s8","note8"],
-	"storage": ["64GB","128GB"],
-	"price": [50000,60000]},
-
-	{"brand": "apple",
-	"model": ["6","7+"],
-	"storage": ["64GB","128GB"],
-	"price": [70000,80000]},
-	
-	{"brand": "oneplus",
-	"model": ["3","5"],
-	"storage": ["64GB","128GB"],
-	"price": [30000,40000]},
-	
-	{"brand": "htc",
-	"model": "u11",
-	"storage": ["64GB","128GB"],
-	"price": [40000,50000]}
-
-]';
-
-$somearray = json_decode($mobileJSON, true); //print_r($somearray);
-echo $somearray[0]["price"][0];
-
-	?>
-
-
+<!-- 
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#brand").change(function(){
@@ -93,38 +155,7 @@ echo $somearray[0]["price"][0];
 			}); //end of change
 		}); //end of ready*/
 	</script>
+ -->
 
-	<?php
-if(empty($_SESSION)){
-	header("Location: login.php");
-	exit();
-}
-$email = $_SESSION["email"];
-$pass = $_SESSION["password"];
-echo $email;
-$con = mysqli_connect("localhost","root","","mobile");
-if($con)
-	echo "<script>console.log('Database connected')</script>";
-else
-	echo "<script>console.log('Unable to connect to database')</script>";
-
-if(isset($_POST["buy"])){
-	echo $_POST["model"];
-	$sql = "select available from stock where model='".$_POST["model"]."'";
-	$result = mysqli_query($con,$sql);
-	$row = mysqli_fetch_assoc($result);
-	echo "no of rows: ".$row["available"];
-	if($row["available"] > 0){
-		$_SESSION["brand"] = $_POST["brand"];
-		$_SESSION["model"] = $_POST["model"];
-		$_SESSION["color"] = $_POST["color"];
-		$_SESSION["storage"] = $_POST["storage"];
-		//$_SESSION["price"] = $_POST["price"];
-		header("Location: summary.php");
-		exit();
-	}
-
-}
-?>
 </body>
 </html>
