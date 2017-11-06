@@ -87,20 +87,20 @@ if(isset($_POST["buy"])){
     <select name="model" id="model">
     <option value="" disabled selected>Choose your option</option>
       <optgroup label="Samsung">
-        <option value="S8">Samsung Galaxy S8</option>
-        <option value="S8+">Samsung Galaxy S8+</option>
+        <option value="Samsung Galaxy S8">Samsung Galaxy S8</option>
+        <option value="Samsung Galaxy S8+">Samsung Galaxy S8+</option>
       </optgroup>
       <optgroup label="Apple">
-        <option value="7">Iphone 7</option>
-        <option value="X">Iphone X</option>
+        <option value="Iphone 7">Iphone 7</option>
+        <option value="Iphone X">Iphone X</option>
       </optgroup>
        <optgroup label="OnePlus">
-        <option value="5">OnePlus 5</option>
-        <option value="5T">OnePlus 5T</option>
+        <option value="OnePlus 5">OnePlus 5</option>
+        <option value="OnePlus 5T">OnePlus 5T</option>
       </optgroup>
        <optgroup label="HTC">
-        <option value="11">HTC U11+</option>
-        <option value="Life">HTC U11 Life</option>
+        <option value="HTC U11+">HTC U11+</option>
+        <option value="HTC U11 Life">HTC U11 Life</option>
       </optgroup>
     </select>
     <label>Model</label>
@@ -117,6 +117,15 @@ if(isset($_POST["buy"])){
   </div> <br>
 
   <div class="input-field col s6">
+    <select name="ram" id="RAM">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="3GB">3GB</option>
+      <option value="4GB">4GB</option>
+    </select>
+    <label>RAM</label>
+  </div> <br>
+
+  <div class="input-field col s6">
     <select name="storage" id="storage">
       <option value="" disabled selected>Choose your option</option>
       <option value="64GB">64 GB</option>
@@ -128,7 +137,7 @@ if(isset($_POST["buy"])){
 	
 
 			<center><div class="form-group input-field">
-			<input class="btn btn-default btn-success" id="submit" type="submit" name="buy">
+			<input class="btn btn-default btn-success" id="submit" type="submit" value="Get Price">
 			</div></center>
 
 	</form>
