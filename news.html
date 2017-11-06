@@ -1,257 +1,257 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script> 
-		$(document).ready(function(){
-			$("#flip").click(function(){
-				$("#panel").slideToggle("slow");
-			});
-		});
-		$(document).ready(function(){
-			$("#flip1").click(function(){
-				$("#panel1").slideToggle("slow");
-			});
-		});
-		$(document).ready(function(){
-			$("#flip2").click(function(){
-				$("#panel2").slideToggle("slow");
-			});
-		});
-		$(document).ready(function(){
-			$("#flip3").click(function(){
-				$("#panel3").slideToggle("slow");
-			});
-		});
-		$(document).ready(function(){
-			$("#flip4").click(function(){
-				$("#panel4").slideToggle("slow");
-			});
-		});
-		$(document).ready(function(){
-			$("button").click(function(){
-				$("#animate").animate({
-					left: '400px',
-					height: '280px',
-					width: '480px'
-				});
-			});
-		});
-	</script>
-	<style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+ });
+$(document).ready(function(){
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+ });
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+ });
+$(document).ready(function(){
+    $("#flip3").click(function(){
+        $("#panel3").slideToggle("slow");
+    });
+ });
+$(document).ready(function(){
+    $("#flip4").click(function(){
+        $("#panel4").slideToggle("slow");
+    });
+ });
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#animate").animate({
+            left: '400px',
+            height: '280px',
+            width: '480px'
+        });
+    });
+});
+</script>
+<style>
 
-	*{
-		z-index: 1;
-	}
-	header{
-		padding: 1em;
-		color: white;
-		text-align: left;
+*{
+	z-index: 1;
+}
+header{
+	padding: 1em;
+    color: white;
+    text-align: left;
 
-	}
-
-
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		background-color: #333;
-		clear: both;
-	}
-
-	li {
-		float: left;
-	}
-
-	li a {
-		display: block;
-		color: white;
-		text-align: center;
-		padding: 15px 99px;
-		text-decoration: none;
-	}
-
-	li a:hover {
-		background-color: #111;
-	}
-
-	.container{
-		height:auto;
-		background-color:white;
-		margin-top:0px;
-		clear:both;
-		position: relative;
-	}
-
-	footer {
-		position:fixed;
-		background-color: black;
-		color:white;
-		width: 100%; 
-		bottom:0px;
-		margin: 15px auto;
-		text-align: center;
-		clear: both;
-	}
-	.block{
-		height:20px;
-		width:100%;
-		background-color: darkred;
-		clear: both;
-	}
-	#id3{
-		font-family:Times New Roman;
-		margin-left: 200px;
-		color: red;
-		font-size: 30px;
-		font-weight: bold;
-		margin-bottom: 0px;
-		padding:3.4%;
-		text-shadow: 0 0 3px black;
-	}
-	#id4{
-		padding:3.4%;
-	}
-	#main{
-		height:1150px;
-		width :80%;
-		background-color: lightgrey;
-		margin-left: 8%;
-
-	}
-	th,td{
-		cursor: pointer;
-	}
-	#panel, #flip {
-		padding: 5px;
-		text-align: center;
-		background-color: #e5eecc;
-		border: solid 1px #c3c3c3;
-	}
+}
 
 
-	#panel {
-		padding: 50px;
-		display: none;
-	}
-	#panel1, #flip1 {
-		padding: 5px;
-		text-align: center;
-		background-color: #e5eecc;
-		border: solid 1px #c3c3c3;
-	}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    clear: both;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 99px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.container{
+  height:auto;
+  background-color:white;
+  margin-top:0px;
+  clear:both;
+  position: relative;
+}
+
+footer {
+position:fixed;
+background-color: black;
+color:white;
+width: 100%; 
+bottom:0px;
+margin: 15px auto;
+text-align: center;
+clear: both;
+ }
+ .block{
+  height:20px;
+  width:100%;
+  background-color: darkred;
+  clear: both;
+}
+#id3{
+  font-family:Times New Roman;
+  margin-left: 200px;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding:3.4%;
+  text-shadow: 0 0 3px black;
+}
+#id4{
+  padding:3.4%;
+}
+#main{
+  height:1150px;
+  width :80%;
+  background-color: lightgrey;
+  margin-left: 8%;
+
+}
+th,td{
+  cursor: pointer;
+}
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
 
 
-	#panel1 {
-		padding: 50px;
-		display: none;
-	}
-	#panel2, #flip2 {
-		padding: 5px;
-		text-align: center;
-		background-color: #e5eecc;
-		border: solid 1px #c3c3c3;
-	}
+#panel {
+    padding: 50px;
+    display: none;
+}
+#panel1, #flip1 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
 
 
-	#panel2 {
-		padding: 50px;
-		display: none;
-	}
-	#panel3, #flip3 {
-		padding: 5px;
-		text-align: center;
-		background-color: #e5eecc;
-		border: solid 1px #c3c3c3;
-	}
+#panel1 {
+    padding: 50px;
+    display: none;
+}
+#panel2, #flip2 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
 
 
-	#panel3 {
-		padding: 50px;
-		display: none;
-	}
-	#panel4{
-		padding: 50px;
-		display: none;
-	}
-	#panel4, #flip4 {
-		padding: 5px;
-		text-align: center;
-		background-color: #e5eecc;
-		border: solid 1px #c3c3c3;
-	}
+#panel2 {
+    padding: 50px;
+    display: none;
+}
+#panel3, #flip3 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+
+#panel3 {
+    padding: 50px;
+    display: none;
+}
+#panel4{
+    padding: 50px;
+    display: none;
+}
+#panel4, #flip4 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
 </style>
 </head>
 <body>
 
-	<div class="container" style="margin:0px;padding:0px;">
-		<img src="logos1.png" height="135px" width="12%" align="left">
-		<a target="_blank" title="Follow us on Twitter" href="http://www.twitter.com/PLACEHOLDER">
-			<img id="id4"alt="Follow us on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" align="right"></a>
-			<a target="_blank" title="Follow us on Youtube" href="http://www.youtube.com/PLACEHOLDER">
-				<img id="id4" alt="Follow us on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" align="right"></a>
-				<a target="_blank" title="Follow us on Instagram" href="http://www.instagram.com/PLACEHOLDER">
-					<img id="id4"alt="Follow us on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" align="right"></a>
-					<a target="_blank" title="Follow us on Google Plus" href="https://plus.google.com/PLACEHOLDER">
-						<img id="id4"alt="Follow us on Google Plus" src="https://c866088.ssl.cf3.rackcdn.com/assets/googleplus30x30.png" align="right"></a>
-						<a target="_blank" title="Follow us on Facebook" href="http://www.facebook.com/PLACEHOLDER">
-							<img id="id4"alt="Follow us on Facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" align="right"></a>
+ <div class="container" style="margin:0px;padding:0px;">
+  <img src="logos1.png" height="135px" width="12%" align="left">
+   <a target="_blank" title="Follow us on Twitter" href="http://www.twitter.com/PLACEHOLDER">
+  <img id="id4"alt="Follow us on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" align="right"></a>
+  <a target="_blank" title="Follow us on Youtube" href="http://www.youtube.com/PLACEHOLDER">
+  <img id="id4" alt="Follow us on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" align="right"></a>
+  <a target="_blank" title="Follow us on Instagram" href="http://www.instagram.com/PLACEHOLDER">
+  <img id="id4"alt="Follow us on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" align="right"></a>
+  <a target="_blank" title="Follow us on Google Plus" href="https://plus.google.com/PLACEHOLDER">
+  <img id="id4"alt="Follow us on Google Plus" src="https://c866088.ssl.cf3.rackcdn.com/assets/googleplus30x30.png" align="right"></a>
+  <a target="_blank" title="Follow us on Facebook" href="http://www.facebook.com/PLACEHOLDER">
+  <img id="id4"alt="Follow us on Facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" align="right"></a>
 
-							<p id="id3">Mobile Reviews,News,Updates And More</p>
-						</div>
-						<div class="block"></div>
-						<nav>
-							<ul>
-								<li><a  href="mobarena.html">Home</a></li>
-								<li><a href="news.html">News</a></li>
-								<li><a href="reviews.html">Reviews</a></li>
-								<li><a href="top10.html">Top 10</a></li>
-								<li><a href="login.html">Login/Register</a></li>
-								<li><a href="about.html">About</a></li>
-							</ul>
-						</ul>
-					</nav>
-				</header><br><br>
-				
+  <p id="id3">Mobile Reviews,News,Updates And More</p>
+  </div>
+<div class="block"></div>
+<nav>
+<ul>
+   <li><a  href="mobarena.html">Home</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="reviews.html">Reviews</a></li>
+  <li><a href="top10.html">Top 10</a></li>
+  <li><a href="login.php">Login/Register</a></li>
+    <li><a href="about.php">About</a></li>
+</ul>
+</ul>
+</nav>
+</header><br><br>
+  
 
-				<div id="main">
-					<table width=100%>
-						<tr>
-							<th rowspan="2"><img  src="news1.jpg"></td>
-								<th style="font-size:30px" id="flip">Nokia introduces Storytellers to boost OZO+ sales<br>Click to know more</th>
-							</tr>
-							<tr>
-								<th id="panel">Nokia has been part of the virtual reality game with the 360-degree camera OZO. To keep the project running, the Finnish company announced today the OZO Reality - a suite of software that lets producers capture, edit and livestream VR footage.OZO's firmware was updated, and now it sports the name OZO+. Along with the updates, Nokia introduced the OZO Storytellers program to attract more content creators. Through it authors can reach “broad range of audiences including partners throughout Nokia’s ecosystem" with their footage. They will also provide valuable feedback to the company, essentially telling Nokia if there is future in the project.</th>
-							</tr>
-							<tr>
-								<th rowspan="2"><img src="news2.jpg"></td>
-									<th style="font-size:30px" id="flip1">Get a free LG K8 (2017) with each LG G6 order in some EU countries<br>Click to know more</th>
-								</tr>
-								<tr>
-									<th id="panel1">German online retailer Saturn.de offers the LG Bundle, but it is available only via the LG G6 listing. Then, above the specs and price, you can find more info about the sweet deal. Everyone who buys the flagship for €749 will receive the LG K8 (2017) by May 15.
-									The bargain is similar in Spain. Until the end of April, you can get a gray LG G6 with a titan LG K8 (2017) for €749 in cash on Orange.es. New customers of the telecom may get the combo in 24 installments for €22,90 per month, but if you are already a subscriber of the operator, the deal is €20.90/monthly.</th>
-								</tr>
-								<tr>
-									<th rowspan="2"><img src="news3.jpg"></td>
-										<th style="font-size:30px" id="flip2">Samsung will soon start producing second generation 10nm chips<br>Click to know more</th>
-									</tr>
-									<tr>
-										<th id="panel2">Intel made the “tick-tock” approach famous and while things have gotten more complicated recently, the basic rhythm of chip releases lives on. Samsung has announced that the second generation of its 10nm process is ready for production and the company is increasing its manufacturing capacity.The Snapdragon 835 and Exynos 8895 are built on 10nm LPE (Low Power Early). The second generation is called 10nm LPP (for Low Power Plus) and features enhancements to the 3D FinFET structure.The result is a 10% performance gain or a 15% power consumption reduction. We will probably see 10nm LPP used for the refreshed version of both the Snapdragon and Exynos top chips. </th>
-									</tr>
-									<tr>
-										<th rowspan="2"><img src="news4.jpg"></td>
-											<th style="font-size:30px" id="flip3">HTC U to have Bluetooth 5.0<br>Click to know more</th>
-										</tr>
-										<tr>
-											<th id="panel3">Earlier today HTC teased the launch of its new U flagship. The 5-second clip didn’t give any details besides the Edge Sense technology that lets you perform actions through squeezing the device.However a listing on Bluetooth.org revealed that an HTC device with the model number STK-Q50-2PZC, allegedly the model name of HTC U, will come with Bluetooth 5.0.</th>
-										</tr>
-										<tr>
-											<th rowspan="2"><img id="animate" src="news5.jpg"><button>Click to enlarge the image</button></td>
-												<th style="font-size:30px" id="flip4">Supply issues hit Samsung Galaxy S8 sales in Korea<br>Click to know more</th>
-											</tr>
-											<tr>
-												<th id="panel4">Korean pre-orders for the Samsung Galaxy S8 started shipping a couple of days ago. The first day saw 210,900 units being delivered, but the number fell to just 63,400 on the second day. Reason? Supply issues.Reports citing Korean carriers are suggesting that it's the Galaxy S8+ variant with 6GB RAM and 128GB storage which is facing supply shortages.With a total of over 1 million pre-orders, the Samsung Galaxy S8 became the most pre-ordered phone in Samsung's home country. Not just that, around one-third of those units have already gone online, while official sales are yet to begin (April 21) - this is also a record.</th>
-											</tr>
-										</body>
-										</html>
+<div id="main">
+  <table width=100%>
+  <tr>
+    <th rowspan="2"><img  src="news1.jpg"></td>
+    <th style="font-size:30px" id="flip">Nokia introduces Storytellers to boost OZO+ sales<br>Click to know more</th>
+  </tr>
+  <tr>
+    <th id="panel">Nokia has been part of the virtual reality game with the 360-degree camera OZO. To keep the project running, the Finnish company announced today the OZO Reality - a suite of software that lets producers capture, edit and livestream VR footage.OZO's firmware was updated, and now it sports the name OZO+. Along with the updates, Nokia introduced the OZO Storytellers program to attract more content creators. Through it authors can reach “broad range of audiences including partners throughout Nokia’s ecosystem" with their footage. They will also provide valuable feedback to the company, essentially telling Nokia if there is future in the project.</th>
+  </tr>
+ <tr>
+    <th rowspan="2"><img src="news2.jpg"></td>
+    <th style="font-size:30px" id="flip1">Get a free LG K8 (2017) with each LG G6 order in some EU countries<br>Click to know more</th>
+  </tr>
+  <tr>
+    <th id="panel1">German online retailer Saturn.de offers the LG Bundle, but it is available only via the LG G6 listing. Then, above the specs and price, you can find more info about the sweet deal. Everyone who buys the flagship for €749 will receive the LG K8 (2017) by May 15.
+    The bargain is similar in Spain. Until the end of April, you can get a gray LG G6 with a titan LG K8 (2017) for €749 in cash on Orange.es. New customers of the telecom may get the combo in 24 installments for €22,90 per month, but if you are already a subscriber of the operator, the deal is €20.90/monthly.</th>
+  </tr>
+  <tr>
+    <th rowspan="2"><img src="news3.jpg"></td>
+    <th style="font-size:30px" id="flip2">Samsung will soon start producing second generation 10nm chips<br>Click to know more</th>
+  </tr>
+  <tr>
+    <th id="panel2">Intel made the “tick-tock” approach famous and while things have gotten more complicated recently, the basic rhythm of chip releases lives on. Samsung has announced that the second generation of its 10nm process is ready for production and the company is increasing its manufacturing capacity.The Snapdragon 835 and Exynos 8895 are built on 10nm LPE (Low Power Early). The second generation is called 10nm LPP (for Low Power Plus) and features enhancements to the 3D FinFET structure.The result is a 10% performance gain or a 15% power consumption reduction. We will probably see 10nm LPP used for the refreshed version of both the Snapdragon and Exynos top chips. </th>
+  </tr>
+  <tr>
+    <th rowspan="2"><img src="news4.jpg"></td>
+    <th style="font-size:30px" id="flip3">HTC U to have Bluetooth 5.0<br>Click to know more</th>
+  </tr>
+  <tr>
+    <th id="panel3">Earlier today HTC teased the launch of its new U flagship. The 5-second clip didn’t give any details besides the Edge Sense technology that lets you perform actions through squeezing the device.However a listing on Bluetooth.org revealed that an HTC device with the model number STK-Q50-2PZC, allegedly the model name of HTC U, will come with Bluetooth 5.0.</th>
+  </tr>
+  <tr>
+    <th rowspan="2"><img id="animate" src="news5.jpg"><!-- <button>Click to enlarge the image</button> --></td>
+    <th style="font-size:30px" id="flip4">Supply issues hit Samsung Galaxy S8 sales in Korea<br>Click to know more</th>
+  </tr>
+  <tr>
+    <th id="panel4">Korean pre-orders for the Samsung Galaxy S8 started shipping a couple of days ago. The first day saw 210,900 units being delivered, but the number fell to just 63,400 on the second day. Reason? Supply issues.Reports citing Korean carriers are suggesting that it's the Galaxy S8+ variant with 6GB RAM and 128GB storage which is facing supply shortages.With a total of over 1 million pre-orders, the Samsung Galaxy S8 became the most pre-ordered phone in Samsung's home country. Not just that, around one-third of those units have already gone online, while official sales are yet to begin (April 21) - this is also a record.</th>
+  </tr>
+</body>
+</html>
