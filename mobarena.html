@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile Arena-Mobile Reviews,News,Updates And More</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="This webpage provides you the biggest detailed database for mobile phones and their specifications.Also MobileArena brings you news about the latest technology.">
+	<meta name="keywords" content="Mobile,Mobile Phones,Smartphone,Samsung,HTC">
+	<!-- <meta name="author" content="John Doe"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$(".hide").hide(1000);
+			});
+			$("#show").click(function(){
+				$(".hide").show(1000);
+
+			});
+		});
+
+
+	</script>
+	<style>
+
+	*{
+		z-index: 1;
+	}
+	header{
+		padding: 1em;
+		color: white;
+		text-align: left;
+
+	}
+
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		clear: both;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 99px;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		background-color: #111;
+	}
+/*body {
+background-image: url("bg.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}*/
+table{
+	border-collapse: collapse;
+	cursor: pointer;
+}
+
+td{
+	margin: 5px;
+	padding:3px; 
+	border-right:1px solid grey;
+	text-shadow: none;
+	text-align:center;
+	font-family: tahoma;
+
+}
+td:hover{
+	background-color:darkred;
+	color:white;
+} 
+thead:hover{
+	background-color:darkred;
+	color: white;
+} 
+#trend:hover{
+	background-color:darkred;
+	color:white;
+}
+#id1{
+	border:0px;
+}
+#id2{
+	margin-top: 0px;
+}
+#id3{
+	font-family:Times New Roman;
+	margin-left: 200px;
+	color: red;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 0px;
+	padding:3.4%;
+	text-shadow: 0 0 3px black;
+}
+#id4{
+	padding:3.4%;
+}
+#trend{
+	font-size: 17px;
+	font-family:Myriad Pro;
+	color: black;
+	font-weight: bold;
+}
+.box2{
+	float: left;
+	width: 240px;
+	margin-right: 50px;
+}
+
+.thead{
+	background-color:darkgrey;
+	width:200px;
+	height:25px;
+	color: white;
+	padding: 20px;
+}
+
+.info {
+	background-color: lightgrey;
+	width: auto;
+	height:auto;
+	border: 0px;
+	padding: 5px;
+}
+.container{
+	height:auto;
+	background-color:white;
+	margin-top:0px;
+	clear:both;
+	position: relative;
+}
+.box{
+	background-color: lightgrey;
+	width: 50%;
+	height:auto ;
+	border: 0px;
+	padding: 5px;
+	float: left;
+}
+.box1{
+	background-color: lightgrey;
+	width: 400px;
+
+	height:auto;
+	border: 0px;
+	padding: 5px;
+	float: right;
+}
+.block{
+	height:20px;
+	width:100%;
+	background-color: darkred;
+	clear: both;
+}
+
+#content
+{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+
+	height: auto;
+	max-width: auto;
+	overflow-y: hidden;
+	overflow-x:auto;
+}
+
+.img1{
+	display: inline-block;
+	float:left;
+	margin: 40px;
+	padding: 0px;
+	margin-left: 58px;
+	cursor: pointer;
+
+	position: relative;
+}
+
+.img1:hover{
+	opacity: 0.3;
+
+}
+
+.text1{
+	position: absolute;
+	top: 61%;
+	left: 27%;
+	bottom: 50%;
+	right: 50%;
+	z-index: 0;
+} 
+.text2{
+	position: absolute;
+	top: 60%;
+	left: 55%;
+	bottom: 50%;
+	right: 50%;
+	z-index: 0;
+
+}
+.text3{
+	position: absolute;
+	top: 100%;
+	left: 29%;
+	bottom: 40%;
+	right: 50%;
+	z-index: 0;
+} 
+.text4{
+	position: absolute;
+	top: 99%;
+	left: 53%;
+	bottom: 50%;
+	right: 50%;
+	z-index: 0;
+
+}
+.text5{
+	position: absolute;
+	top: 140%;
+	left: 27%;
+	bottom: 50%;
+	right: 50%;
+	z-index: 0;
+}
+.text6{
+	position: absolute;
+	top: 140%;
+	left: 55%;
+	bottom: 50%;
+	right: 50%;
+	z-index: 0;
+}
+.text{
+	font-variant: small-caps;
+	font-size: 30px;
+	color: darkred;
+}
+
+/*footer {
+position:fixed;
+background-color: black;
+color:white;
+width: 100%; 
+bottom:0px;
+margin: 5px;
+text-align: center;
+clear: both;
+}*/
+footer { font-size: .8em;
+	width: 960px;
+	margin: auto;
+	padding: 30px 20px 50px; 
+	clear: both; 
+	color: #b2b5b9;
+	background: #1e1e1e;
+
+}
+</style>
+</head>
+<body>
+	<div class="container" style="margin:0px;padding:0px;">
+		<img src="logos1.png" height="135px" width="12%" align="left">
+		<a target="_blank" title="Follow us on Twitter" href="http://www.twitter.com/PLACEHOLDER">
+			<img id="id4"alt="Follow us on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" align="right"></a>
+			<a target="_blank" title="Follow us on Youtube" href="http://www.youtube.com/PLACEHOLDER">
+				<img id="id4" alt="Follow us on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" align="right"></a>
+				<a target="_blank" title="Follow us on Instagram" href="http://www.instagram.com/PLACEHOLDER">
+					<img id="id4"alt="Follow us on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" align="right"></a>
+					<a target="_blank" title="Follow us on Google Plus" href="https://plus.google.com/PLACEHOLDER">
+						<img id="id4"alt="Follow us on Google Plus" src="https://c866088.ssl.cf3.rackcdn.com/assets/googleplus30x30.png" align="right"></a>
+						<a target="_blank" title="Follow us on Facebook" href="http://www.facebook.com/PLACEHOLDER">
+							<img id="id4"alt="Follow us on Facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" align="right"></a>
+
+							<p id="id3">Mobile Reviews,News,Updates And More</p>
+						</div>
+						<div class="block"></div>
+						<nav>
+							<ul>
+								<li><a href="mobarena.html">Home</a></li>
+								<li><a href="news.html">News</a></li>
+								<li><a href="reviews.html">Reviews</a></li>
+								<li><a href="top10.html">Top 10</a></li>
+								<li><a href="login.html">Login/Register</a></li>
+								<li><a href="about.php">About</a></li>
+							</ul>
+						</nav>
+					</header><br><br>
+
+					<div class="box2">
+
+						<div class="info" style="margin:0px;padding:0px;">
+							<div class="thead" style="font-size:25px;weight:bold"><center>&#128270BRANDS</center></div>
+							<table>
+
+								<tr>
+									<td>Samsung</td>
+									<td>Apple</td>
+									<td id="id1">Nokia</td>
+								</tr>
+								<tr>
+									<td>Oppo</td>
+									<td>OnePlus</td>
+									<td id="id1">HTC</td>
+								</tr>
+								<tr>
+									<td>Gionee</td>
+									<td>Lenovo</td>
+									<td id="id1">LG</td>
+								</tr>
+								<tr>
+									<td>Sony</td>
+									<td>Asus</td>
+									<td id="id1">Google</td>
+								</tr>
+								<tr>
+									<td>YU</td>
+									<td>Blackberry</td>
+									<td id="id1">Vivo</td>
+								</tr>
+								<tr>
+									<td>Motorola</td>
+									<td>HP</td>
+									<td id="id1">Micromax</td>
+								</tr>
+								<tr>
+									<td>Acer</td>
+									<td>Xolo</td>
+									<td id="id1">LeeCo</td>
+								</tr>
+								<tr>
+									<td>Toshiba</td>
+									<td>Lava</td>
+									<td id="id1">Panasonic</td>
+								</tr>
+								<tr>
+									<td>Coolpad</td>
+									<td>Ericsson</td>
+									<td id="id1">Huawei</td>
+								</tr>
+								<tr>
+									<td>Spice</td>
+									<td>Vodafone</td>
+									<td id="id1">Microsoft</td>
+								</tr>
+							</table>
+
+
+						</div>
+						<div class="thead" style="font-size:25px;weight:bold;cursor:pointer"><center>ALL BRANDS</center></div>
+					</div>
+					<div class="box" style="margin:0px; padding:0px;">
+						<div class="thead" style="font-size:25px;weight:bold;width:auto"><center>LATEST MOBILES</center></div>
+
+
+						<div id="content">
+							<img class="img1" src="xi6.jpg" height="200px" width="270px" alt="Xiaomi Mobile"><span class="text text1">Xiaomi Mi 6</span>
+							<img class="img1" src="ultra2.jpg" height="200px" width="270px" alt="HTC Mobile"><span class="text text2">HTC Ultra</span>
+							<img class="img1" src="n6.jpg" height="200px" width="270px" alt="Nokia Mobile"><span class="text text3">Nokia 6</span>
+							<img class="img1" src="s8.jpg" height="200px" width="270px" alt="Samsung Mobile"><span class="text text4">Samsung Galaxy S8+</span>
+							<img class="img1" src="f3.png" height="200px" width="270px" alt="Oppo Mobile"><span class="text text5">Oppo F3 Plus</span>
+							<img class="img1" src="r4a.jpg" height="200px" width="270px" alt="Redmi Mobile"><span class="text text6">Redmi 4a</span>
+
+						</div>
+					</div>
+					<div class="box1" style="margin:0px; padding:0px;">
+						<div class="thead" style="font-size:25px;weight:bold;width:AUTO"><center>TRENDING</center></div>
+						<p id="trend" style="cursor:pointer">Samsung Introduces Galaxy S8 and S8+</p>
+						<p id="trend" style="cursor:pointer">Samsung Galaxy S8 uses two different camera sensors</p>
+						<p id="trend" style="cursor:pointer">Sprint Offers Galaxy Forever Promo with Galaxy S8/S8+ Launch</p>
+						<p id="trend" style="cursor:pointer">Urban Armor Gear Announces Rugged Cases for Galaxy S8/S8+</p>
+						<p id="trend" class="hide" style="cursor:pointer">Moshi Annnounces New Cases For Galaxy S8/S8+</p>
+						<p id="trend" class="hide" style="cursor:pointer">T-Mobile Rolling Out Free Scam ID and Scam Block</p>
+						<p id="trend" class="hide" style="cursor:pointer">Huawei Adds Amazon Alexa to Mate 9 via OTA Update</p>
+						<p id="trend" class="hide" style="cursor:pointer">Apple Updates 9.7" iPad with A9 Chip and Lowers Price</p>
+						<p id="trend" class="hide" style="cursor:pointer">Cristiano Ronaldo teases the ZTE nubia Z17 mini ahead of its April 6 unveiling</p>
+						<button id="hide" style="border:1px solid blue;padding:2%;font-weight:bold">Hide Extra News</button> 
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						<button id="show" style="border:1px solid blue;padding:2%;font-weight:bold">Show Extra News</button>
+					</div>
+
+<!-- <footer>
+<p>
+
+<div class="col-sm-10 form-group">
+<p>dsdsdsds</p>
+</div>
+
+<div class="col-sm-6 form-group">
+<p>dsdsdsds</p>
+</div>
+
+ 
+
+
+</footer> -->
+</body>
+</html>
