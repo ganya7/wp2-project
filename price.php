@@ -101,7 +101,7 @@
 				<script type="text/javascript">
 					function myfunction(){
 						alert("Your order has been confirmed!");
-						window.location.href="homemobarena.html";
+						window.location.href="mobarena.html";
 					}
 				</script>
 			</body>
