@@ -87,6 +87,9 @@
 					echo "GST:         ".$gst."<br><br>";
 					echo "TOTAL PRICE: ".$total."<br><br>";
 					echo "YOUR ORDER IS CONFIRMED</center>";*/
+					$con = mysqli_connect("localhost","root","","order");
+					$sql = "insert into usercart values('$model','$color','$ram','$storage','$total')";
+					$result = mysqli_query($con,$sql);
 				}
 				calculateprice($model,$color,$ram,$storage);
 
@@ -104,5 +107,9 @@
 						window.location.href="mobarena.html";
 					}
 				</script>
+				<?php 
+					
+
+				 ?>
 			</body>
 			</html>

@@ -204,7 +204,7 @@ if($result)
   <li><a href="news.html">News</a></li>
   <li><a href="reviews.html">Reviews</a></li>
   <li><a href="top10.html">Top 10</a></li>
-  <li><a href="login.html">Login/Register</a></li>
+  <li><a href="login.php">Login/Register</a></li>
     <li><a href="about.php">About</a></li>
 </ul>
 </ul>
